@@ -41,4 +41,11 @@ export class ServicosPage {
   ionViewDidLoad() {
     console.log("ionViewDidLoad ServicosPage");
   }
+
+  apiwhatsapp(servico: Servico): string {
+    const mensagem = servico.mensagem;
+    const fone = servico.telefone;
+    const link = `https://wa.me/${fone}?text=${mensagem}`;
+    return link;
+  }
 }

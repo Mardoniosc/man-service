@@ -8,5 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-<p>Página de Serviços</p>
+  <ion-list>
+    <a ion-item *ngFor='let item of servicos' [href]="apiwhatsapp(item)">
+
+      <h2>{{ item.nome }}</h2>
+    </a>
+  </ion-list>
 </ion-content>
