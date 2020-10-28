@@ -9,6 +9,8 @@ import { Financeiro } from '../../shared';
 })
 export class FinanceiroPage {
 
+  url = 'https://americalatina.dint.fgv.br/sites/americalatina.dint.fgv.br/files/teste33.pdf'
+
   financeiro: Financeiro[] = [
     {nome: 'Transporte', descricao: 'Viagem de Uber', valor: 20.37, estado: true},
     {nome: 'Hidraulica', descricao: 'Conserto de pia', valor: 45.00, estado: false},
@@ -18,7 +20,12 @@ export class FinanceiroPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FinanceiroPage');
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad FinanceiroPage');
+  // }
+
+  downloadPDF(url: string){
+    const filePDF = window.open(url, '_system', 'location=no');
+    console.log(filePDF)
   }
 }

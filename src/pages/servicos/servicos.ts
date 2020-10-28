@@ -38,9 +38,9 @@ export class ServicosPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad ServicosPage");
-  }
+  // ionViewDidLoad() {
+  //   console.log("ionViewDidLoad ServicosPage");
+  // }
 
   apiwhatsapp(servico: Servico): string {
     const mensagem = servico.mensagem;

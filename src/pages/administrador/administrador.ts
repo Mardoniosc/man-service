@@ -30,9 +30,9 @@ export class AdministradorPage {
     public storangeService: StorangeService
   ) {}
 
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad AdministradorPage");
-  }
+  // ionViewDidLoad() {
+  //   console.log("ionViewDidLoad AdministradorPage");
+  // }
 
   detalhesUser(user: Usuario) {
     this.storangeService.setLocalUser(user);
@@ -42,5 +42,4 @@ export class AdministradorPage {
   logout(): void {
     this.navCtrl.setRoot("HomePage");
   }
-
 }
