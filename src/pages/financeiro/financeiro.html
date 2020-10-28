@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Financeiro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of financeiro">
+    <ion-card-header>
+      <strong>
+        {{ item.nome }}
+      </strong>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <h2>{{ item.descricao }}</h2>
+        <p><strong>Valor: </strong>R$ {{ item.valor | currency }}</p>
+      </ion-item>
+      <ion-item>
+        <h2>Pagamento: {{ item.estado ? 'Pago' : 'Pendente' }}</h2>
+      </ion-item>
+      <ion-item>
+        <button ion-button block> Download Boleto </button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
