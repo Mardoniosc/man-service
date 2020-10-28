@@ -46,6 +46,7 @@ export class DetailsUserPage {
     setTimeout(() => {
       loader.dismiss();
       this.alertmsg('Boleto', `Boleto ${this.file.name}, enviado com sucesso!`);
+      this.file = null;
     }, 2000);
   }
   // ionViewDidLoad() {}

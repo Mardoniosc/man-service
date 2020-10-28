@@ -9,30 +9,35 @@ import { Servico } from "../../shared";
 })
 export class ServicosPage {
   servicos: Array<Servico> = [
-    { id: 1, nome: "Elétrico", telefone: "5561984137835", mensagem: "Bom dia" },
+    {
+      id: 1,
+      nome: "Elétrico",
+      telefone: "5561984137835",
+      mensagem: "Bom dia, sobre os serviços eletricos",
+    },
     {
       id: 2,
       nome: "Hidráulico",
       telefone: "5561984137835",
-      mensagem: "Bom dia",
+      mensagem: "Bom dia, sobre os serviços Hidráulicos",
     },
     {
       id: 3,
       nome: "Transporte",
       telefone: "5561984137835",
-      mensagem: "Bom dia",
+      mensagem: "Bom dia, sobre os serviços de transporte",
     },
     {
       id: 4,
       nome: "Informática",
       telefone: "5561984137835",
-      mensagem: "Bom dia",
+      mensagem: "Bom dia, sobre os serviços de informatica",
     },
     {
       id: 5,
       nome: "Marcenaria",
       telefone: "5561984137835",
-      mensagem: "Bom dia",
+      mensagem: "Bom dia, sobre os serviços de marcenaria",
     },
   ];
 
