@@ -14,6 +14,11 @@ import { Usuario } from "../../shared";
   templateUrl: "details-user.html",
 })
 export class DetailsUserPage {
+
+  file = null;
+
+  autoManufacturers
+
   usuario: Usuario = this.storangeService.getLocalUser()
 
   constructor(
@@ -23,12 +28,12 @@ export class DetailsUserPage {
     public storangeService: StorangeService
   ) {}
 
-  // ionViewDidLoad() {}
+  atualizaArquivo(event) {
+    console.log(event)
+  }
 
-  ionViewWillEnter() {
-    this.menu.swipeEnable(false);
+  enviarArquivo(){
+    console.log('Enviando arquivo...')
   }
-  ionViewDidLeave() {
-    this.menu.swipeEnable(true);
-  }
+  // ionViewDidLoad() {}
 }

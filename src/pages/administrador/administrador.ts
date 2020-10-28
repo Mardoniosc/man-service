@@ -34,13 +34,6 @@ export class AdministradorPage {
     console.log("ionViewDidLoad AdministradorPage");
   }
 
-  ionViewWillEnter() {
-    this.menu.swipeEnable(false);
-  }
-  ionViewDidLeave() {
-    this.menu.swipeEnable(true);
-  }
-
   detalhesUser(user: Usuario) {
     this.storangeService.setLocalUser(user);
     this.navCtrl.push('DetailsUserPage')
@@ -49,4 +42,5 @@ export class AdministradorPage {
   logout(): void {
     this.navCtrl.setRoot("HomePage");
   }
+
 }

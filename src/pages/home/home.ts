@@ -22,14 +22,12 @@ export class HomePage {
     if (this.creds.email === "admin" && this.creds.senha === "admin") {
       this.navCtrl.setRoot("AdministradorPage");
     } else {
+      this.menu.swipeEnable(true);
       this.navCtrl.setRoot("ServicosPage");
     }
   }
 
   ionViewWillEnter() {
     this.menu.swipeEnable(false);
-  }
-  ionViewDidLeave() {
-    this.menu.swipeEnable(true);
   }
 }
