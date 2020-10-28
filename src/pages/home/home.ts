@@ -1,19 +1,29 @@
-import { Component } from '@angular/core';
-import { NavController, IonicPage, MenuController } from 'ionic-angular';
+import { Component } from "@angular/core";
+import { NavController, IonicPage, MenuController } from "ionic-angular";
 
+export interface Credenciais {
+  email: string;
+  senha: string;
+}
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: "page-home",
+  templateUrl: "home.html",
 })
 export class HomePage {
+  creds: Credenciais = {
+    email: "",
+    senha: "",
+  };
 
-  constructor(public navCtrl: NavController, public menu: MenuController) {
-
-  }
+  constructor(public navCtrl: NavController, public menu: MenuController) {}
 
   login() {
-    this.navCtrl.setRoot('ServicosPage')
+    if (this.creds.email === "admin" && this.creds.senha === "admin") {
+      this.navCtrl.setRoot("AdministradorPage");
+    } else {
+      this.navCtrl.setRoot("ServicosPage");
+    }
   }
 
   ionViewWillEnter() {
@@ -22,5 +32,4 @@ export class HomePage {
   ionViewDidLeave() {
     this.menu.swipeEnable(true);
   }
-
 }

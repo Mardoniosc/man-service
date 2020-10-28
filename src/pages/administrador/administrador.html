@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Administrador</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let user of usuarios">
+    <a (click)="detalhesUser(user)">
+      <ion-card-header>
+        <strong>{{ user.nomeSobrenome }} </strong> -
+        <span>{{ user.localidade }}</span>
+      </ion-card-header>
+    </a>
+    </ion-card>
+    <button ion-button block outline (click)="logout()">SAIR</button>
+</ion-content>
+
