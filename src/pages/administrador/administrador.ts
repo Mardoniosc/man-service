@@ -5,12 +5,8 @@ import {
   NavParams,
   MenuController,
 } from "ionic-angular";
-
-export interface Usuario {
-  id: number;
-  nomeSobrenome: string;
-  localidade: string;
-}
+import { Usuario } from "../../shared";
+import { StorangeService } from "../../shared/services";
 
 @IonicPage()
 @Component({
@@ -30,7 +26,8 @@ export class AdministradorPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public menu: MenuController
+    public menu: MenuController,
+    public storangeService: StorangeService
   ) {}
 
   ionViewDidLoad() {
@@ -45,7 +42,8 @@ export class AdministradorPage {
   }
 
   detalhesUser(user: Usuario) {
-    console.log(user);
+    this.storangeService.setLocalUser(user);
+    this.navCtrl.push('DetailsUserPage')
   }
 
   logout(): void {
